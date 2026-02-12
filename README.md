@@ -14,15 +14,21 @@
 ### BUTTON
 这是按钮，可以通过`BUTTON button(pin);`注册一个名叫`button`的，引脚号是`pin`的按钮
 > 高级用法
+> 
 > 世界上有两种按钮
+> 
 > 1.点击后高电平，平时低电平
+> 
 > 请用`BUTTON button(pin,m = 1);`注册
+> 
 > 2.点击后低电平，平时高电平
+> 
 > 请用`BUTTON button(pin,m = 0);`注册，m=0是可选参数，不写默认为0
+> 
 如何获取按钮状态？
 你可以直接把按钮类别转换为bool类型，得出的结果表示是否按下
 样例
-```Arduino
+```cpp
 #include "MyToolsV5.h"
 
 BUTTON button1(3);
