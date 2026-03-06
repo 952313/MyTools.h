@@ -128,11 +128,11 @@ GrayscaleSensors sensors(leftPin, leftThresh, rightPin, rightThresh);
 
 #### 构造函数
 ```cpp
-BUTTON btn(pin, mode = 0);
+BUTTON btn(pin, mode = False, use_pullup = True);
 ```
 - `mode=0`：按下为高电平
 - `mode=1`：按下为低电平
-
+- `use_pullup`：开启后使用上拉电阻输入（默认开启，可用use_pullup = False关闭）
 #### 常用方法
 | 方法 | 说明 |
 |------|------|
@@ -217,7 +217,7 @@ void loop() {
 
 ## 🧪 注意事项
 
-- 本库不包含软件去抖，请在需要时自行添加 `delay()` 或使用去抖算法。
+- 本库不包含软件去抖，请在需要时自行添加 `delay()` 或 `BUTTON.waitUntilRelease()` 或使用去抖算法。
 - 模拟引脚请使用 `A0, A1…` 等宏定义。
 - 所有类均设计为**轻量、无动态内存分配**，适合资源受限的 Arduino 环境。
 - 如需扩展功能，建议通过继承或组合方式实现，而非修改库文件。
