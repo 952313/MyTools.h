@@ -1,6 +1,6 @@
 # MyTools.h – Arduino 工具库
 
-**版本：V5**  
+**版本：V6**  
 **许可证：GNU Affero General Public License v3.0**  
 **作者：YangJincheng**  
 **最后更新：2026年2月**
@@ -19,8 +19,8 @@
 
 ## 📁 文件结构
 
-- `MyToolsV5.h`：主头文件，包含所有类定义
-- 使用时只需将此文件放入项目目录，并在代码中 `#include "MyToolsV5.h"`
+- `MyToolsV6.h`：主头文件，包含所有类定义
+- 使用时只需将此文件放入项目目录，并在代码中 `#include "MyToolsV6.h"`
 
 ---
 
@@ -183,7 +183,7 @@ Serial.println(p.toString()); // "(10, 3.14)"
 ## 🚀 快速示例
 
 ```cpp
-#include "MyToolsV5.h"
+#include "MyToolsV6.h"
 
 Motors motors;
 GrayscaleSensors sensors(A0, 500, A1, 500);
